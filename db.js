@@ -1,14 +1,3 @@
-// - store data in an object literal
-// - export
-//   - getCategoryNames
-//   - getProductsByCategory
-//   - createProduct
-//   - deleteProduct
-//   - updateProduct
-//   - deleteCategory
-//   - createCategory
-    
-
 var data = 
 {
   "Bar Category": [
@@ -34,4 +23,35 @@ var data =
       "id": 1
     }
   ]
+};
+
+module.exports = {
+    list: function(){
+      return data;
+    },
+    getCategoryNames: function(){
+      var categoryNames = [];
+      for(category in categories){
+         categoryNames.push(categories[category]);
+      }
+      return categoryNames;
+    },
+    getProductsByCategory: function(category){
+      return data[category];
+    },
+    createProduct: function(){
+
+    },
+    deleteProduct: function(){
+
+    },
+    updateProduct: function(){
+
+    },
+    deleteCategory: function(){
+
+    },
+    createCategory: function(){
+
+    }
 };
